@@ -14,7 +14,7 @@ export default function BrandsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Hidden Brand 1 */}
           <div className="bg-dark-accent/20 backdrop-blur-xl rounded-2xl border border-dark-accent/30 p-8 relative overflow-hidden opacity-60">
             <div className="absolute inset-0 bg-gradient-to-br from-gray-500/10 to-gray-600/10 backdrop-blur-sm"></div>
@@ -35,14 +35,14 @@ export default function BrandsSection() {
               rel="noopener noreferrer"
               className="block h-full"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-40 overflow-hidden">
                 <img 
                   src={miraiPreview} 
                   alt="Mirai linenwear collection" 
                   className="w-full h-full object-cover smooth-hover scale-hover"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-4">
                 <h3 className="text-2xl font-black text-theme mb-2 font-mono transition-colors duration-500">Mirai</h3>
                 <p className="text-theme-muted text-sm font-geist font-light mb-4 transition-colors duration-500">
                   A modern linenwear brand blending minimalist design with desert-inspired tones, crafted for comfort, elegance, and timeless style—designed and manufactured in Egypt.
