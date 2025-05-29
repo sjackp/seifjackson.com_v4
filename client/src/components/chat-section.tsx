@@ -1,4 +1,4 @@
-import { Mail, Github, Terminal } from "lucide-react";
+import { Mail, Instagram, Terminal } from "lucide-react";
 
 export default function ChatSection() {
   return (
@@ -31,13 +31,13 @@ export default function ChatSection() {
               Send Email
             </a>
             <a
-              href="https://github.com/sjackp"
+              href="https://www.instagram.com/seifjackson/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 border border-orange-accent text-orange-accent rounded-xl font-bold font-geist smooth-hover hover:bg-orange-accent hover:text-black button-click"
             >
-              <Github className="mr-2 w-4 h-4" />
-              GitHub Profile
+              <Instagram className="mr-2 w-4 h-4" />
+              Instagram Profile
             </a>
           </div>
         </div>
