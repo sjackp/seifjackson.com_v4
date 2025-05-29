@@ -54,6 +54,9 @@ export default function AboutSection() {
           <h2 className="text-4xl sm:text-6xl font-black text-theme mb-4 font-geist tracking-tight transition-colors duration-500">
             About <span className="gradient-text">Me</span>
           </h2>
+          <div className="text-orange-accent font-mono text-xs mt-4">
+            $ whoami --verbose
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
