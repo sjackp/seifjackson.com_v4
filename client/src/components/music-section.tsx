@@ -31,11 +31,11 @@ export default function MusicSection() {
             </div>
             <iframe
               width="100%"
-              height="400"
+              height="166"
               scrolling="no"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/seifjackson/cornucopia-in-the-summer&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/seifjackson/cornucopia-in-the-summer&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true&show_artwork=true&theme=dark"
               className="rounded-xl"
             />
           </div>
@@ -48,11 +48,11 @@ export default function MusicSection() {
             </div>
             <iframe
               width="100%"
-              height="400"
+              height="166"
               scrolling="no"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/seifjackson/lost-community-mix-002&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/seifjackson/lost-community-mix-002&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true&show_artwork=true&theme=dark"
               className="rounded-xl"
             />
           </div>
