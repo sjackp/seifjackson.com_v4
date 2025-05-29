@@ -16,7 +16,7 @@ export default function BrandsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Hidden Brand 1 */}
-          <div className="bg-dark-accent/20 backdrop-blur-xl rounded-2xl border border-dark-accent/30 p-8 relative overflow-hidden opacity-60">
+          <div className="bg-dark-accent/20 backdrop-blur-xl rounded-2xl border border-dark-accent/30 relative overflow-hidden opacity-60 flex items-center justify-center min-h-[280px]">
             <div className="absolute inset-0 bg-gradient-to-br from-gray-500/10 to-gray-600/10 backdrop-blur-sm"></div>
             <div className="relative z-10 text-center">
               <div className="w-16 h-16 bg-gray-400/20 rounded-xl mx-auto mb-4 flex items-center justify-center">
@@ -56,7 +56,7 @@ export default function BrandsSection() {
           </div>
 
           {/* Hidden Brand 2 */}
-          <div className="bg-dark-accent/20 backdrop-blur-xl rounded-2xl border border-dark-accent/30 p-8 relative overflow-hidden opacity-60">
+          <div className="bg-dark-accent/20 backdrop-blur-xl rounded-2xl border border-dark-accent/30 relative overflow-hidden opacity-60 flex items-center justify-center min-h-[280px]">
             <div className="absolute inset-0 bg-gradient-to-br from-gray-500/10 to-gray-600/10 backdrop-blur-sm"></div>
             <div className="relative z-10 text-center">
               <div className="w-16 h-16 bg-gray-400/20 rounded-xl mx-auto mb-4 flex items-center justify-center">
