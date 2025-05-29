@@ -92,7 +92,7 @@ export default function ProjectsSection() {
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-theme mb-2 font-mono transition-colors duration-500">
+                    <h3 className={`text-lg font-bold mb-2 font-mono transition-colors duration-500 ${getLanguageColor(repo.language)}`}>
                       {repo.name}
                     </h3>
                     <a
