@@ -1,6 +1,6 @@
 import { ExternalLink, Star, GitFork, Calendar } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "./ui/skeleton";
 
 interface GitHubRepo {
   id: number;
