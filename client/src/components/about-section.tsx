@@ -53,20 +53,20 @@ export default function AboutSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Profile Image */}
-          <div className="flex justify-center lg:justify-start">
-            <div className="relative">
-              <img
-                src={profileImage}
-                alt="Seif Jackson professional headshot"
-                className="w-80 h-80 object-cover rounded-2xl shadow-2xl"
-              />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-blue-accent/20 to-transparent"></div>
-            </div>
-          </div>
-
-          {/* Bio and Details */}
+          {/* Left Side - Profile Image and Bio */}
           <div className="space-y-8">
+            {/* Profile Image */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="relative">
+                <img
+                  src={profileImage}
+                  alt="Seif Jackson professional headshot"
+                  className="w-80 h-80 object-cover rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-blue-accent/20 to-transparent"></div>
+              </div>
+            </div>
+
             {/* Bio Section */}
             <div>
               <h3 className="text-2xl font-bold text-theme mb-4 font-geist transition-colors duration-500">Bio</h3>
@@ -78,7 +78,10 @@ export default function AboutSection() {
                 Constantly exploring new ways to merge technology, art, and community, Seif is driven by curiosity, self-expression, and the desire to build something meaningful.
               </p>
             </div>
+          </div>
 
+          {/* Right Side - Skills, Experience, and Education */}
+          <div className="space-y-8">
             {/* Skills Section */}
             <div>
               <h3 className="text-2xl font-bold text-theme mb-4 font-geist transition-colors duration-500">Skills</h3>
