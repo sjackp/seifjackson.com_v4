@@ -25,7 +25,7 @@ export default function ChatSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:contact@seifjackson.com"
-              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-accent to-orange-light text-black rounded-xl font-bold font-geist"
+              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-accent to-orange-light text-black rounded-xl font-bold font-geist smooth-hover scale-hover glow-hover button-click"
             >
               <Mail className="mr-2 w-4 h-4" />
               Send Email
@@ -34,7 +34,7 @@ export default function ChatSection() {
               href="https://github.com/sjackp"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 border border-orange-accent text-orange-accent rounded-xl font-bold font-geist"
+              className="inline-flex items-center justify-center px-6 py-3 border border-orange-accent text-orange-accent rounded-xl font-bold font-geist smooth-hover hover:bg-orange-accent hover:text-black button-click"
             >
               <Github className="mr-2 w-4 h-4" />
               GitHub Profile

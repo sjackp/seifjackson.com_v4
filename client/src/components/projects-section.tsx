@@ -88,7 +88,7 @@ export default function ProjectsSection() {
             {repos.map((repo) => (
               <div
                 key={repo.id}
-                className="bg-dark-accent/30 backdrop-blur-xl rounded-2xl border border-dark-accent/40 overflow-hidden"
+                className="bg-dark-accent/30 backdrop-blur-xl rounded-2xl border border-dark-accent/40 overflow-hidden smooth-hover lift-hover glow-hover cursor-pointer"
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
@@ -99,7 +99,7 @@ export default function ProjectsSection() {
                       href={repo.html_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400"
+                      className="text-gray-400 smooth-hover hover:text-orange-accent scale-hover button-click"
                     >
                       <ExternalLink className="w-4 h-4" />
                     </a>
