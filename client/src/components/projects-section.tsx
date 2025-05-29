@@ -15,7 +15,7 @@ interface GitHubRepo {
 }
 
 async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
-  const response = await fetch('https://api.github.com/users/sjackp/repos?sort=updated&per_page=6');
+  const response = await fetch('/api/github');
   if (!response.ok) {
     throw new Error('Failed to fetch GitHub repositories');
   }
