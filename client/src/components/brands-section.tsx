@@ -2,7 +2,7 @@ import { Lock, ExternalLink } from "lucide-react";
 
 export default function BrandsSection() {
   return (
-    <section id="brands" className="py-16 px-4 sm:px-6 lg:px-8">
+    <section id="brands" className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-6xl font-black text-theme mb-4 font-geist tracking-tight transition-colors duration-500">
