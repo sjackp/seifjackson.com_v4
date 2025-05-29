@@ -10,8 +10,8 @@ export default function Home() {
     <div className="min-h-screen">
       <Navigation />
       <BrandsSection />
-      <AboutSection />
       <ProjectsSection />
+      <AboutSection />
       <ChatSection />
       <Footer />
     </div>
