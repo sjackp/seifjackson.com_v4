@@ -83,7 +83,7 @@ export default function AboutSection() {
                 {skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-gradient-to-r from-orange-accent to-orange-light text-black rounded-full text-sm font-medium font-geist font-semibold"
+                    className="px-4 py-2 bg-gradient-to-r from-orange-accent to-orange-light text-black rounded-full text-sm font-medium font-geist font-semibold smooth-hover scale-hover glow-hover cursor-pointer button-click"
                   >
                     {skill}
                   </span>
