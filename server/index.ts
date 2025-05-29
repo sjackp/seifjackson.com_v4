@@ -38,7 +38,7 @@ async function createServer() {
   app.use(vite.ssrFixStacktrace);
   app.use(vite.middlewares);
 
-  const port = process.env.PORT || 5000;
+  const port = parseInt(process.env.PORT || '5000');
   app.listen(port, '0.0.0.0', () => {
     console.log(`Portfolio server running on http://0.0.0.0:${port}`);
   });
