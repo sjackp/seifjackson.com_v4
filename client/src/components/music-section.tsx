@@ -23,11 +23,11 @@ export default function MusicSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* SoundCloud Profile Widget */}
+          {/* Cornucopia in the Summer */}
           <div className="bg-dark-accent/30 backdrop-blur-xl rounded-2xl border border-dark-accent/40 p-8">
             <div className="flex items-center gap-3 mb-6">
               <Music className="w-6 h-6 text-orange-accent" />
-              <span className="font-mono text-orange-accent">profile.exe</span>
+              <span className="font-mono text-orange-accent">cornucopia.mp3</span>
             </div>
             <iframe
               width="100%"
@@ -35,16 +35,16 @@ export default function MusicSection() {
               scrolling="no"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/seifjackson&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/seifjackson/cornucopia-in-the-summer&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
               className="rounded-xl"
             />
           </div>
 
-          {/* Featured Track */}
+          {/* Lost Community Mix 002 */}
           <div className="bg-dark-accent/30 backdrop-blur-xl rounded-2xl border border-dark-accent/40 p-8">
             <div className="flex items-center gap-3 mb-6">
               <Music className="w-6 h-6 text-orange-accent" />
-              <span className="font-mono text-orange-accent">featured.mp3</span>
+              <span className="font-mono text-orange-accent">lost_community.mp3</span>
             </div>
             <iframe
               width="100%"
@@ -52,7 +52,7 @@ export default function MusicSection() {
               scrolling="no"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/seifjackson/tracks&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/seifjackson/lost-community-mix-002&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
               className="rounded-xl"
             />
           </div>
@@ -64,7 +64,7 @@ export default function MusicSection() {
             href="https://soundcloud.com/seifjackson"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-accent to-orange-light text-black dark:text-white rounded-xl font-bold font-geist smooth-hover scale-hover glow-hover button-click transition-colors duration-500"
+            className="inline-flex items-center justify-center px-8 py-4 border border-orange-accent text-orange-accent rounded-xl font-bold font-geist smooth-hover hover:bg-orange-accent hover:text-black button-click"
           >
             <Music className="mr-3 w-5 h-5" />
             Visit SoundCloud Profile
