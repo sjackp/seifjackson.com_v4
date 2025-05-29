@@ -35,7 +35,7 @@ export default function BrandsSection() {
               rel="noopener noreferrer"
               className="block h-full"
             >
-              <div className="aspect-square overflow-hidden">
+              <div className="h-48 overflow-hidden">
                 <img 
                   src={miraiPreview} 
                   alt="Mirai linenwear collection" 
