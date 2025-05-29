@@ -59,6 +59,9 @@ export default function ProjectsSection() {
           <p className="text-gray-300 text-lg max-w-2xl mx-auto font-geist font-light">
             Latest repositories from my GitHub profile - real projects, real code.
           </p>
+          <div className="text-orange-accent font-mono text-xs mt-4">
+            $ git log --oneline --author="seifjackson"
+          </div>
         </div>
 
         {isLoading && (
@@ -109,6 +112,9 @@ export default function ProjectsSection() {
                     {repo.description || "No description available"}
                   </p>
 
+                  <div className="flex items-center justify-between text-xs text-theme-muted mb-3 transition-colors duration-500">
+                    <span className="font-mono">$ cat README.md</span>
+                  </div>
                   <div className="flex items-center justify-between text-xs text-theme-muted mb-3 transition-colors duration-500">
                     <div className="flex items-center gap-4">
                       {repo.language && (
