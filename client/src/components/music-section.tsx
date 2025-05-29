@@ -18,7 +18,7 @@ export default function MusicSection() {
             My <span className="gradient-text">Music</span>
           </h2>
           <p className="text-theme-muted text-lg max-w-2xl mx-auto font-geist font-light transition-colors duration-500">
-            Electronic soundscapes from my SoundCloud
+            Electronic soundscapes and sets from my SoundCloud
           </p>
         </div>
 
