@@ -1,3 +1,5 @@
+import profileImage from "@assets/87212987_10206284744353820_265047718940901376_n.jpg";
+
 export default function AboutSection() {
   const skills = [
     "AI Engineering & Generative Art",
@@ -55,7 +57,7 @@ export default function AboutSection() {
           <div className="flex justify-center lg:justify-start">
             <div className="relative">
               <img
-                src="@assets/87212987_10206284744353820_265047718940901376_n.jpg"
+                src={profileImage}
                 alt="Seif Jackson professional headshot"
                 className="w-80 h-80 object-cover rounded-2xl shadow-2xl"
               />
