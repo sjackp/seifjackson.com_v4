@@ -11,8 +11,8 @@ export default function Home() {
     <div className="min-h-screen">
       <Navigation />
       <BrandsSection />
-      <ProjectsSection />
       <MusicSection />
+      <ProjectsSection />
       <AboutSection />
       <ChatSection />
       <Footer />
