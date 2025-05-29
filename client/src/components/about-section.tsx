@@ -64,15 +64,11 @@ export default function AboutSection() {
             <div>
               <h3 className="text-2xl font-bold text-theme mb-4 font-geist transition-colors duration-500">Bio</h3>
               <p className="text-theme-muted leading-relaxed text-lg font-geist font-light transition-colors duration-500">
-                Hey there! I'm Seif Jackson, a 24-year-old Egyptian-American
-                with a passion for blending art and technology. I've dived into
-                the world of AI, mastering everything from prompt engineering to
-                training and fine-tuning. I'm also a music producer, DJ, and
-                visual artist who loves to experiment and create unique
-                experiences. Based in Cairo, my journey has taken me to various
-                educational institutions, and I'm now pursuing my business
-                studies at the EU Business School's Barcelona campus. Let's work
-                together and explore the possibilities of what we can create!
+                26-year-old Egyptian-American creative and entrepreneur based in Cairo. With a unique blend of technical expertise and artistic vision, bridging the worlds of artificial intelligence, fashion, music, and design. He has deep experience in AI development and brings that same innovative mindset to the ready-made garment manufacturing industry, building modern, purpose-driven clothing brands.
+                <br /><br />
+                A graduate of EU Business School in Barcelona, also a music producer, DJ, and visual artist who thrives on crafting immersive and experimental experiences.
+                <br /><br />
+                Constantly exploring new ways to merge technology, art, and community, Seif is driven by curiosity, self-expression, and the desire to build something meaningful.
               </p>
             </div>
 
