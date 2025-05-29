@@ -8,8 +8,8 @@ export default function Navigation() {
 
   const navItems = [
     { id: "brands", label: "Brands", href: "#brands" },
-    { id: "about", label: "About", href: "#about" },
     { id: "projects", label: "Projects", href: "#projects" },
+    { id: "about", label: "About", href: "#about" },
     { id: "chat", label: "Chat", href: "#chat" },
   ];
 
