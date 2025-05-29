@@ -6,7 +6,7 @@ export default function BrandsSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-6xl font-black text-theme mb-4 font-geist tracking-tight transition-colors duration-500">
-            My <span className="gradient-text">Brands</span>
+            <span className="gradient-text">Brands</span>
           </h2>
           <p className="text-theme-muted text-lg max-w-2xl mx-auto font-geist font-light transition-colors duration-500">
             Explore the different ventures and projects I'm working on

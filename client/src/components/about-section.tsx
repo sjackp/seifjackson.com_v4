@@ -41,7 +41,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-6xl font-black text-theme mb-4 font-geist tracking-tight transition-colors duration-500">
-            About <span className="gradient-text">Me</span>
+            <span className="gradient-text">Me</span>
           </h2>
         </div>
 
