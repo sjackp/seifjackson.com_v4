@@ -42,7 +42,7 @@ export default function BrandsSection() {
                 A modern linenwear brand blending minimalist design with desert-inspired tones, crafted for comfort, elegance, and timeless style—designed and manufactured in Egypt.
               </p>
               <div className="flex items-center justify-center gap-2 text-orange-accent">
-                <span className="text-xs font-mono">explore.exe</span>
+                <span className="text-xs font-mono">explore.mirai</span>
                 <ExternalLink className="w-3 h-3" />
               </div>
             </a>
