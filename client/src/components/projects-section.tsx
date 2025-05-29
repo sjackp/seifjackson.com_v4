@@ -92,7 +92,7 @@ export default function ProjectsSection() {
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-white mb-2 font-mono">
+                    <h3 className="text-lg font-bold text-theme mb-2 font-mono transition-colors duration-500">
                       {repo.name}
                     </h3>
                     <a
@@ -105,11 +105,11 @@ export default function ProjectsSection() {
                     </a>
                   </div>
                   
-                  <p className="text-gray-300 mb-4 leading-relaxed text-sm font-geist font-light min-h-[3rem]">
+                  <p className="text-theme-muted mb-4 leading-relaxed text-sm font-geist font-light min-h-[3rem] transition-colors duration-500">
                     {repo.description || "No description available"}
                   </p>
 
-                  <div className="flex items-center justify-between text-xs text-gray-400 mb-3">
+                  <div className="flex items-center justify-between text-xs text-theme-muted mb-3 transition-colors duration-500">
                     <div className="flex items-center gap-4">
                       {repo.language && (
                         <span className={`flex items-center gap-1 ${getLanguageColor(repo.language)} font-mono`}>
@@ -128,7 +128,7 @@ export default function ProjectsSection() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-1 text-xs text-gray-500 font-geist">
+                  <div className="flex items-center gap-1 text-xs text-theme-muted font-geist transition-colors duration-500">
                     <Calendar className="w-3 h-3" />
                     Updated {formatDate(repo.updated_at)}
                   </div>
