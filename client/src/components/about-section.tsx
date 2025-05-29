@@ -9,7 +9,12 @@ export default function AboutSection() {
     {
       title: "Generative Art & AI Expert",
       company: "Upwork Freelancer",
-      period: "2019-Present",
+      period: "2021-Present",
+    },
+    {
+      title: "Ready Made Garment Manufacturing",
+      company: "Independent",
+      period: "2022-Present",
     },
     {
       title: "Music Producer & DJ",
@@ -22,7 +27,7 @@ export default function AboutSection() {
     {
       degree: "BBA in Business Administration",
       institution: "EU Business School",
-      period: "2018-2019 & 2022-Present",
+      period: "2018-2019 & 2022-2024",
     },
     {
       degree: "High School Diploma",
