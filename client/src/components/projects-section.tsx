@@ -88,18 +88,18 @@ export default function ProjectsSection() {
             {repos.map((repo) => (
               <div
                 key={repo.id}
-                className="bg-dark-accent/30 backdrop-blur-xl rounded-2xl border border-dark-accent/40 overflow-hidden hover:bg-dark-accent/50 hover:border-neon-green/30 transition-all duration-300 group hover:-translate-y-1 glow-neon-green hover:shadow-2xl"
+                className="bg-dark-accent/30 backdrop-blur-xl rounded-2xl border border-dark-accent/40 overflow-hidden"
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-white mb-2 font-mono group-hover:text-neon-green transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-white mb-2 font-mono">
                       {repo.name}
                     </h3>
                     <a
                       href={repo.html_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-neon-green transition-colors duration-300"
+                      className="text-gray-400"
                     >
                       <ExternalLink className="w-4 h-4" />
                     </a>
@@ -138,7 +138,7 @@ export default function ProjectsSection() {
                       {repo.topics.slice(0, 3).map((topic) => (
                         <span
                           key={topic}
-                          className="px-2 py-1 bg-neon-green/10 text-neon-green text-xs rounded-md font-mono"
+                          className="px-2 py-1 bg-orange-accent/10 text-orange-accent text-xs rounded-md font-mono"
                         >
                           {topic}
                         </span>
