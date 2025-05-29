@@ -1,58 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: 222 84% 4.9%; /* #0F172A */
-  --foreground: 210 40% 98%;
-  --muted: 217 32.6% 17.5%; /* #1E293B */
-  --muted-foreground: 215 20.2% 65.1%;
-  --popover: 222 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --card: 222 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --border: 217 32.6% 17.5%;
-  --input: 217 32.6% 17.5%;
-  --primary: 217 91% 60%; /* #3B82F6 */
-  --primary-foreground: 222 84% 4.9%;
-  --secondary: 217 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --accent: 215 27.9% 33.3%; /* #334155 */
-  --accent-foreground: 210 40% 98%;
+  --background: 0 0% 3%; /* #080808 */
+  --foreground: 0 0% 98%;
+  --muted: 0 0% 8%; /* #141414 */
+  --muted-foreground: 0 0% 65%;
+  --popover: 0 0% 3%;
+  --popover-foreground: 0 0% 98%;
+  --card: 0 0% 3%;
+  --card-foreground: 0 0% 98%;
+  --border: 0 0% 12%;
+  --input: 0 0% 12%;
+  --primary: 120 100% 50%; /* #00FF00 */
+  --primary-foreground: 0 0% 3%;
+  --secondary: 0 0% 12%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 0 0% 15%;
+  --accent-foreground: 0 0% 98%;
   --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --ring: 217 91% 60%;
-  --radius: 0.5rem;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 120 100% 50%;
+  --radius: 0.75rem;
   
-  /* Custom colors for the portfolio */
-  --dark-primary: 222 84% 4.9%; /* #0F172A */
-  --dark-secondary: 217 32.6% 17.5%; /* #1E293B */
-  --dark-accent: 215 27.9% 33.3%; /* #334155 */
-  --blue-accent: 217 91% 60%; /* #3B82F6 */
-  --blue-hover: 217 91% 53%; /* #2563EB */
+  /* Custom colors for the sleek portfolio */
+  --dark-primary: 0 0% 3%; /* #080808 */
+  --dark-secondary: 0 0% 8%; /* #141414 */
+  --dark-accent: 0 0% 15%; /* #262626 */
+  --neon-green: 120 100% 50%; /* #00FF00 */
+  --neon-green-dim: 120 100% 40%; /* #00CC00 */
+  --electric-blue: 195 100% 50%; /* #00BFFF */
+  --electric-blue-dim: 195 100% 40%; /* #0099CC */
 }
 
 .dark {
-  --background: 222 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --muted: 217 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --popover: 222 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --card: 222 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --border: 217 32.6% 17.5%;
-  --input: 217 32.6% 17.5%;
-  --primary: 217 91% 60%;
-  --primary-foreground: 222 84% 4.9%;
-  --secondary: 217 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --accent: 215 27.9% 33.3%;
-  --accent-foreground: 210 40% 98%;
+  --background: 0 0% 3%;
+  --foreground: 0 0% 98%;
+  --muted: 0 0% 8%;
+  --muted-foreground: 0 0% 65%;
+  --popover: 0 0% 3%;
+  --popover-foreground: 0 0% 98%;
+  --card: 0 0% 3%;
+  --card-foreground: 0 0% 98%;
+  --border: 0 0% 12%;
+  --input: 0 0% 12%;
+  --primary: 120 100% 50%;
+  --primary-foreground: 0 0% 3%;
+  --secondary: 0 0% 12%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 0 0% 15%;
+  --accent-foreground: 0 0% 98%;
   --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --ring: 217 91% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 120 100% 50%;
 }
 
 @layer base {
@@ -61,9 +63,10 @@
   }
 
   body {
-    @apply font-inter antialiased text-foreground;
-    background: linear-gradient(135deg, hsl(var(--dark-secondary)), hsl(var(--dark-primary)));
+    @apply font-geist antialiased text-foreground;
+    background: radial-gradient(ellipse at center, hsl(var(--dark-secondary)) 0%, hsl(var(--dark-primary)) 100%);
     min-height: 100vh;
+    letter-spacing: -0.025em;
   }
   
   html {
@@ -72,24 +75,44 @@
 }
 
 @layer utilities {
-  .font-inter {
-    font-family: 'Inter', sans-serif;
+  .font-geist {
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
   }
   
-  .text-blue-accent {
-    color: hsl(var(--blue-accent));
+  .font-mono {
+    font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
   }
   
-  .text-blue-hover {
-    color: hsl(var(--blue-hover));
+  .text-neon-green {
+    color: hsl(var(--neon-green));
   }
   
-  .bg-blue-accent {
-    background-color: hsl(var(--blue-accent));
+  .text-neon-green-dim {
+    color: hsl(var(--neon-green-dim));
   }
   
-  .bg-blue-hover {
-    background-color: hsl(var(--blue-hover));
+  .text-electric-blue {
+    color: hsl(var(--electric-blue));
+  }
+  
+  .text-electric-blue-dim {
+    color: hsl(var(--electric-blue-dim));
+  }
+  
+  .bg-neon-green {
+    background-color: hsl(var(--neon-green));
+  }
+  
+  .bg-neon-green-dim {
+    background-color: hsl(var(--neon-green-dim));
+  }
+  
+  .bg-electric-blue {
+    background-color: hsl(var(--electric-blue));
+  }
+  
+  .bg-electric-blue-dim {
+    background-color: hsl(var(--electric-blue-dim));
   }
   
   .bg-dark-primary {
@@ -106,5 +129,20 @@
   
   .border-dark-accent {
     border-color: hsl(var(--dark-accent));
+  }
+  
+  .glow-neon-green {
+    box-shadow: 0 0 20px hsl(var(--neon-green) / 0.3);
+  }
+  
+  .glow-electric-blue {
+    box-shadow: 0 0 20px hsl(var(--electric-blue) / 0.3);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--neon-green)), hsl(var(--electric-blue)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

@@ -1,83 +1,155 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Star, GitFork, Calendar } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { Skeleton } from "@/components/ui/skeleton";
+
+interface GitHubRepo {
+  id: number;
+  name: string;
+  description: string | null;
+  html_url: string;
+  stargazers_count: number;
+  forks_count: number;
+  language: string | null;
+  updated_at: string;
+  topics: string[];
+}
+
+async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
+  const response = await fetch('https://api.github.com/users/sjackp/repos?sort=updated&per_page=6');
+  if (!response.ok) {
+    throw new Error('Failed to fetch GitHub repositories');
+  }
+  return response.json();
+}
 
 export default function ProjectsSection() {
-  const projects = [
-    {
-      title: "J_Captioneer_v2.release",
-      description:
-        "Advanced AI-powered image captioning tool with enhanced natural language processing capabilities and batch processing features.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      githubUrl: "#",
-    },
-    {
-      title: "J_Captioneer.lite",
-      description:
-        "Lightweight version of the captioning tool optimized for mobile devices and quick image analysis workflows.",
-      image:
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      githubUrl: "#",
-    },
-    {
-      title: "AI Art Generator",
-      description:
-        "Neural network-powered generative art tool that creates unique visual compositions from text prompts and style parameters.",
-      image:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      githubUrl: "#",
-    },
-    {
-      title: "Audio Processing Suite",
-      description:
-        "Comprehensive audio processing tools for music production, including AI-enhanced mixing and mastering capabilities.",
-      image:
-        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      githubUrl: "#",
-    },
-  ];
+  const { data: repos, isLoading, error } = useQuery({
+    queryKey: ['github-repos'],
+    queryFn: fetchGitHubRepos,
+  });
+
+  const getLanguageColor = (language: string | null) => {
+    const colors: Record<string, string> = {
+      JavaScript: 'text-yellow-400',
+      TypeScript: 'text-blue-400',
+      Python: 'text-green-400',
+      Java: 'text-orange-400',
+      'C++': 'text-blue-300',
+      Go: 'text-cyan-400',
+      Rust: 'text-orange-300',
+    };
+    return colors[language || ''] || 'text-gray-400';
+  };
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+    });
+  };
 
   return (
     <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8 bg-dark-primary/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Projects
+          <h2 className="text-4xl sm:text-6xl font-black text-white mb-4 font-geist tracking-tight">
+            <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Explore my latest work in AI engineering, generative art, and
-            creative technology solutions.
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto font-geist font-light">
+            Latest repositories from my GitHub profile - real projects, real code.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 overflow-hidden hover:bg-white/15 transition-all duration-300 group hover:-translate-y-1"
-            >
-              <img
-                src={project.image}
-                alt={`${project.title} application interface`}
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-                <a
-                  href={project.githubUrl}
-                  className="inline-flex items-center text-blue-accent hover:text-blue-hover font-medium transition-colors duration-300"
-                >
-                  View on GitHub
-                  <ExternalLink className="ml-2 w-4 h-4" />
-                </a>
+        {isLoading && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <div key={index} className="bg-dark-accent/30 backdrop-blur-xl rounded-2xl border border-dark-accent/40 p-6">
+                <Skeleton className="h-4 w-3/4 mb-3 bg-dark-accent" />
+                <Skeleton className="h-3 w-full mb-2 bg-dark-accent" />
+                <Skeleton className="h-3 w-2/3 mb-4 bg-dark-accent" />
+                <div className="flex justify-between items-center">
+                  <Skeleton className="h-3 w-20 bg-dark-accent" />
+                  <Skeleton className="h-3 w-16 bg-dark-accent" />
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
+
+        {error && (
+          <div className="text-center py-12">
+            <p className="text-red-400 font-geist">Failed to load repositories. Please check your connection.</p>
+          </div>
+        )}
+
+        {repos && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {repos.map((repo) => (
+              <div
+                key={repo.id}
+                className="bg-dark-accent/30 backdrop-blur-xl rounded-2xl border border-dark-accent/40 overflow-hidden hover:bg-dark-accent/50 hover:border-neon-green/30 transition-all duration-300 group hover:-translate-y-1 glow-neon-green hover:shadow-2xl"
+              >
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="text-lg font-bold text-white mb-2 font-mono group-hover:text-neon-green transition-colors duration-300">
+                      {repo.name}
+                    </h3>
+                    <a
+                      href={repo.html_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-neon-green transition-colors duration-300"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-4 leading-relaxed text-sm font-geist font-light min-h-[3rem]">
+                    {repo.description || "No description available"}
+                  </p>
+
+                  <div className="flex items-center justify-between text-xs text-gray-400 mb-3">
+                    <div className="flex items-center gap-4">
+                      {repo.language && (
+                        <span className={`flex items-center gap-1 ${getLanguageColor(repo.language)} font-mono`}>
+                          <span className="w-2 h-2 rounded-full bg-current"></span>
+                          {repo.language}
+                        </span>
+                      )}
+                      <span className="flex items-center gap-1">
+                        <Star className="w-3 h-3" />
+                        {repo.stargazers_count}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <GitFork className="w-3 h-3" />
+                        {repo.forks_count}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-1 text-xs text-gray-500 font-geist">
+                    <Calendar className="w-3 h-3" />
+                    Updated {formatDate(repo.updated_at)}
+                  </div>
+
+                  {repo.topics.length > 0 && (
+                    <div className="flex flex-wrap gap-1 mt-3">
+                      {repo.topics.slice(0, 3).map((topic) => (
+                        <span
+                          key={topic}
+                          className="px-2 py-1 bg-neon-green/10 text-neon-green text-xs rounded-md font-mono"
+                        >
+                          {topic}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
