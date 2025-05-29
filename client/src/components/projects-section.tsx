@@ -53,8 +53,8 @@ export default function ProjectsSection() {
     <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8 bg-dark-primary/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-6xl font-black text-white mb-4 font-geist tracking-tight">
-            <span className="gradient-text">Projects</span>
+          <h2 className="text-4xl sm:text-6xl font-black text-theme mb-4 font-geist tracking-tight transition-colors duration-500">
+            My <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto font-geist font-light">
             Latest repositories from my GitHub profile - real projects, real code.
