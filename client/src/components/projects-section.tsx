@@ -1,6 +1,6 @@
 import { ExternalLink, Star, GitFork, Calendar } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
-import { Skeleton } from "./ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface GitHubRepo {
   id: number;
@@ -15,7 +15,7 @@ interface GitHubRepo {
 }
 
 async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
-  const response = await fetch('/api/github');
+  const response = await fetch('https://api.github.com/users/sjackp/repos?sort=updated&per_page=6');
   if (!response.ok) {
     throw new Error('Failed to fetch GitHub repositories');
   }

@@ -1,4 +1,4 @@
-import profileImage from "../../../attached_assets/87212987_10206284744353820_265047718940901376_n.jpg";
+import profileImage from "@assets/87212987_10206284744353820_265047718940901376_n.jpg";
 
 export default function AboutSection() {
   const skills = [
