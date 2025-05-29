@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
   "$schema": "https://openapi.vercel.sh/vercel.json",
+=======
+>>>>>>> 23bf96a603f95151e17baeec5ca619eca9415634
   "version": 2,
   "builds": [
     {
@@ -10,10 +13,17 @@
       }
     }
   ],
+<<<<<<< HEAD
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/index.html"
+=======
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+>>>>>>> 23bf96a603f95151e17baeec5ca619eca9415634
     }
   ]
 } 
