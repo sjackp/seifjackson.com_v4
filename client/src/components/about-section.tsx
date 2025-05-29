@@ -40,8 +40,8 @@ export default function AboutSection() {
     <section id="about" className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            About Me
+          <h2 className="text-4xl sm:text-6xl font-black text-white mb-4 font-geist tracking-tight">
+            About <span className="gradient-text">Me</span>
           </h2>
         </div>
 
@@ -62,8 +62,8 @@ export default function AboutSection() {
           <div className="space-y-8">
             {/* Bio Section */}
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Bio</h3>
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <h3 className="text-2xl font-bold text-white mb-4 font-geist">Bio</h3>
+              <p className="text-gray-300 leading-relaxed text-lg font-geist font-light">
                 Hey there! I'm Seif Jackson, a 24-year-old Egyptian-American
                 with a passion for blending art and technology. I've dived into
                 the world of AI, mastering everything from prompt engineering to
@@ -78,12 +78,12 @@ export default function AboutSection() {
 
             {/* Skills Section */}
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Skills</h3>
+              <h3 className="text-2xl font-bold text-white mb-4 font-geist">Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-blue-accent text-white rounded-full text-sm font-medium hover:bg-blue-hover transition-colors duration-300"
+                    className="px-4 py-2 bg-gradient-to-r from-neon-green to-electric-blue text-black rounded-full text-sm font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 font-geist font-semibold"
                   >
                     {skill}
                   </span>
