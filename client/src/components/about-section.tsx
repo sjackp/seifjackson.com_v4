@@ -7,14 +7,14 @@ export default function AboutSection() {
 
   const experience = [
     {
+      title: "Ready-Made Garment Manufacturing",
+      company: "Independent",
+      period: "2022-Present",
+    },
+    {
       title: "Generative Art & AI Expert",
       company: "Upwork Freelancer",
       period: "2021-Present",
-    },
-    {
-      title: "Ready Made Garment Manufacturing",
-      company: "Independent",
-      period: "2022-Present",
     },
     {
       title: "Music Producer & DJ",
