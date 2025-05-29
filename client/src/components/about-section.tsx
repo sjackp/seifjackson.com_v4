@@ -79,7 +79,8 @@ export default function AboutSection() {
                 <br /><br />
                 A graduate of EU Business School in Barcelona, also a music producer, DJ, and visual artist who thrives on crafting immersive and experimental experiences.
                 <br /><br />
-                Constantly exploring new ways to merge technology, art, and community, Seif is driven by curiosity, self-expression, and the desire to build something meaningful.
+                Constantly exploring new ways to merge technology, art, and community. 
+                Driven by curiosity, self-expression, and the desire to build something meaningful.
               </p>
             </div>
           </div>
