@@ -5,6 +5,10 @@ export default function AboutSection() {
     "AI Engineering & Generative Art",
     "Music Production & DJ",
     "Visual Art & Graphic Design",
+    "Pattern Drafting",
+    "Cutting & Sewing",
+    "Quality Control",
+    "Logistics",
   ];
 
   const experience = [
