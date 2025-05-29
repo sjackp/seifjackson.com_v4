@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222 84% 4.9%; /* #0F172A */
+  --foreground: 210 40% 98%;
+  --muted: 217 32.6% 17.5%; /* #1E293B */
+  --muted-foreground: 215 20.2% 65.1%;
+  --popover: 222 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --card: 222 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --border: 217 32.6% 17.5%;
+  --input: 217 32.6% 17.5%;
+  --primary: 217 91% 60%; /* #3B82F6 */
+  --primary-foreground: 222 84% 4.9%;
+  --secondary: 217 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 215 27.9% 33.3%; /* #334155 */
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 217 91% 60%;
+  --radius: 0.5rem;
+  
+  /* Custom colors for the portfolio */
+  --dark-primary: 222 84% 4.9%; /* #0F172A */
+  --dark-secondary: 217 32.6% 17.5%; /* #1E293B */
+  --dark-accent: 215 27.9% 33.3%; /* #334155 */
+  --blue-accent: 217 91% 60%; /* #3B82F6 */
+  --blue-hover: 217 91% 53%; /* #2563EB */
+}
+
+.dark {
+  --background: 222 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --muted: 217 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --popover: 222 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --card: 222 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --border: 217 32.6% 17.5%;
+  --input: 217 32.6% 17.5%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 84% 4.9%;
+  --secondary: 217 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 215 27.9% 33.3%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 217 91% 60%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased text-foreground;
+    background: linear-gradient(135deg, hsl(var(--dark-secondary)), hsl(var(--dark-primary)));
+    min-height: 100vh;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .text-blue-accent {
+    color: hsl(var(--blue-accent));
+  }
+  
+  .text-blue-hover {
+    color: hsl(var(--blue-hover));
+  }
+  
+  .bg-blue-accent {
+    background-color: hsl(var(--blue-accent));
+  }
+  
+  .bg-blue-hover {
+    background-color: hsl(var(--blue-hover));
+  }
+  
+  .bg-dark-primary {
+    background-color: hsl(var(--dark-primary));
+  }
+  
+  .bg-dark-secondary {
+    background-color: hsl(var(--dark-secondary));
+  }
+  
+  .bg-dark-accent {
+    background-color: hsl(var(--dark-accent));
+  }
+  
+  .border-dark-accent {
+    border-color: hsl(var(--dark-accent));
+  }
+}
