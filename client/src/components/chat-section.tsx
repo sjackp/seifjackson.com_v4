@@ -4,10 +4,10 @@ export default function ChatSection() {
   return (
     <section id="chat" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl sm:text-6xl font-black text-white mb-8 font-geist tracking-tight">
+        <h2 className="text-4xl sm:text-6xl font-black text-theme mb-8 font-geist tracking-tight transition-colors duration-500">
           Let's <span className="gradient-text">Connect</span>
         </h2>
-        <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto font-geist font-light">
+        <p className="text-theme-muted text-lg mb-8 max-w-2xl mx-auto font-geist font-light transition-colors duration-500">
           Ready to collaborate on exciting projects? Whether it's AI
           engineering, generative art, or music production, I'm always open to
           new opportunities and creative partnerships.
