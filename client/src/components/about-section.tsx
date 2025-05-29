@@ -55,7 +55,7 @@ export default function AboutSection() {
           <div className="flex justify-center lg:justify-start">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600"
+                src="@assets/87212987_10206284744353820_265047718940901376_n.jpg"
                 alt="Seif Jackson professional headshot"
                 className="w-80 h-80 object-cover rounded-2xl shadow-2xl"
               />
