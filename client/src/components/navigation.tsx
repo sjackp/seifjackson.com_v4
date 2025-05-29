@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./theme-toggle";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,30 +50,31 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-dark-secondary/90 backdrop-blur-xl border-b border-dark-accent/20">
+    <nav className="fixed top-0 w-full z-50 bg-theme-secondary/90 backdrop-blur-xl border-b border-theme-accent/20 transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-white font-mono tracking-tight">sjackp</h1>
+            <h1 className="text-xl font-bold text-theme font-mono tracking-tight">sjackp</h1>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
+            <div className="flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className={`px-3 py-2 rounded-lg text-sm font-medium font-geist smooth-hover button-click ${
                     activeSection === item.id
-                      ? "text-orange-accent bg-dark-accent/30"
-                      : "text-gray-300 hover:text-orange-accent hover:bg-dark-accent/20"
+                      ? "text-orange-accent bg-theme-accent/30"
+                      : "text-theme-muted hover:text-orange-accent hover:bg-theme-accent/20"
                   }`}
                 >
                   {item.label}
                 </button>
               ))}
             </div>
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}

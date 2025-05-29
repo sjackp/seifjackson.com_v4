@@ -4,31 +4,34 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 3%; /* #080808 */
-  --foreground: 0 0% 98%;
-  --muted: 0 0% 8%; /* #141414 */
-  --muted-foreground: 0 0% 65%;
-  --popover: 0 0% 3%;
-  --popover-foreground: 0 0% 98%;
-  --card: 0 0% 3%;
-  --card-foreground: 0 0% 98%;
-  --border: 0 0% 12%;
-  --input: 0 0% 12%;
+  /* Light mode colors */
+  --background: 0 0% 98%; /* #FAFAFA */
+  --foreground: 0 0% 5%;
+  --muted: 0 0% 92%; /* #EBEBEB */
+  --muted-foreground: 0 0% 35%;
+  --popover: 0 0% 98%;
+  --popover-foreground: 0 0% 5%;
+  --card: 0 0% 98%;
+  --card-foreground: 0 0% 5%;
+  --border: 0 0% 88%;
+  --input: 0 0% 88%;
   --primary: 25 95% 53%; /* #FF6B00 */
-  --primary-foreground: 0 0% 3%;
-  --secondary: 0 0% 12%;
-  --secondary-foreground: 0 0% 98%;
-  --accent: 0 0% 15%;
-  --accent-foreground: 0 0% 98%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 92%;
+  --secondary-foreground: 0 0% 5%;
+  --accent: 0 0% 85%;
+  --accent-foreground: 0 0% 5%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
   --ring: 25 95% 53%;
   --radius: 0.75rem;
   
-  /* Custom colors for the sleek portfolio */
-  --dark-primary: 0 0% 3%; /* #080808 */
-  --dark-secondary: 0 0% 8%; /* #141414 */
-  --dark-accent: 0 0% 15%; /* #262626 */
+  /* Custom colors for light mode */
+  --theme-primary: 0 0% 98%; /* #FAFAFA */
+  --theme-secondary: 0 0% 92%; /* #EBEBEB */
+  --theme-accent: 0 0% 85%; /* #D9D9D9 */
+  --theme-text: 0 0% 5%; /* #0D0D0D */
+  --theme-text-muted: 0 0% 35%; /* #595959 */
   --orange-accent: 25 95% 53%; /* #FF6B00 */
   --orange-accent-dim: 25 95% 43%; /* #DB5A00 */
   --orange-light: 30 100% 60%; /* #FF8533 */
@@ -55,6 +58,13 @@
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
   --ring: 25 95% 53%;
+  
+  /* Custom colors for dark mode */
+  --theme-primary: 0 0% 3%; /* #080808 */
+  --theme-secondary: 0 0% 8%; /* #141414 */
+  --theme-accent: 0 0% 15%; /* #262626 */
+  --theme-text: 0 0% 98%; /* #FAFAFA */
+  --theme-text-muted: 0 0% 65%; /* #A6A6A6 */
 }
 
 @layer base {
@@ -63,8 +73,8 @@
   }
 
   body {
-    @apply font-geist antialiased text-foreground;
-    background: radial-gradient(ellipse at center, hsl(var(--dark-secondary)) 0%, hsl(var(--dark-primary)) 100%);
+    @apply font-geist antialiased text-foreground transition-colors duration-500;
+    background: radial-gradient(ellipse at center, hsl(var(--theme-secondary)) 0%, hsl(var(--theme-primary)) 100%);
     min-height: 100vh;
     letter-spacing: -0.025em;
   }
@@ -115,20 +125,28 @@
     background-color: hsl(var(--orange-light-dim));
   }
   
-  .bg-dark-primary {
-    background-color: hsl(var(--dark-primary));
+  .bg-theme-primary {
+    background-color: hsl(var(--theme-primary));
   }
   
-  .bg-dark-secondary {
-    background-color: hsl(var(--dark-secondary));
+  .bg-theme-secondary {
+    background-color: hsl(var(--theme-secondary));
   }
   
-  .bg-dark-accent {
-    background-color: hsl(var(--dark-accent));
+  .bg-theme-accent {
+    background-color: hsl(var(--theme-accent));
   }
   
-  .border-dark-accent {
-    border-color: hsl(var(--dark-accent));
+  .border-theme-accent {
+    border-color: hsl(var(--theme-accent));
+  }
+  
+  .text-theme {
+    color: hsl(var(--theme-text));
+  }
+  
+  .text-theme-muted {
+    color: hsl(var(--theme-text-muted));
   }
   
   .glow-orange {
