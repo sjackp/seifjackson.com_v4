@@ -9,7 +9,7 @@ export default function BrandsSection() {
             My <span className="gradient-text">Brands</span>
           </h2>
           <p className="text-theme-muted text-lg max-w-2xl mx-auto font-geist font-light transition-colors duration-500">
-            Explore the different ventures and projects I'm working on
+            Explore the different ventures and fashion projects I'm working on
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export default function BrandsSection() {
               </div>
               <h3 className="text-2xl font-black text-theme mb-2 font-mono transition-colors duration-500">Mirai</h3>
               <p className="text-theme-muted text-sm font-geist font-light mb-4 transition-colors duration-500">
-                AI-powered creative platform for the future of digital art and music
+                A modern linenwear brand blending minimalist design with desert-inspired tones, crafted for comfort, elegance, and timeless style—designed and manufactured in Egypt.
               </p>
               <div className="flex items-center justify-center gap-2 text-orange-accent">
                 <span className="text-xs font-mono">Explore</span>

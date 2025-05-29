@@ -8,8 +8,7 @@ export default function ChatSection() {
           Let's <span className="gradient-text">Connect</span>
         </h2>
         <p className="text-theme-muted text-lg mb-8 max-w-2xl mx-auto font-geist font-light transition-colors duration-500">
-          Ready to collaborate on exciting projects? Whether it's AI
-          engineering, generative art, or music production, I'm always open to
+          Ready to collaborate on exciting projects? I'm always open to
           new opportunities and creative partnerships.
         </p>
         <div className="bg-dark-accent/30 backdrop-blur-xl rounded-2xl border border-dark-accent/40 p-8">
