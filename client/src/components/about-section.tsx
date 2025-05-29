@@ -83,7 +83,7 @@ export default function AboutSection() {
                 {skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-gradient-to-r from-neon-green to-electric-blue text-black rounded-full text-sm font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 font-geist font-semibold"
+                    className="px-4 py-2 bg-gradient-to-r from-orange-accent to-orange-light text-black rounded-full text-sm font-medium font-geist font-semibold"
                   >
                     {skill}
                   </span>
@@ -98,12 +98,12 @@ export default function AboutSection() {
               </h3>
               <div className="space-y-6">
                 {experience.map((exp, index) => (
-                  <div key={index} className="border-l-2 border-blue-accent pl-6 relative">
-                    <div className="absolute w-3 h-3 bg-blue-accent rounded-full -left-2 top-2"></div>
+                  <div key={index} className="border-l-2 border-orange-accent pl-6 relative">
+                    <div className="absolute w-3 h-3 bg-orange-accent rounded-full -left-2 top-2"></div>
                     <h4 className="text-lg font-semibold text-white">
                       {exp.title}
                     </h4>
-                    <p className="text-blue-accent font-medium">{exp.company}</p>
+                    <p className="text-orange-accent font-medium">{exp.company}</p>
                     <p className="text-gray-400 text-sm">{exp.period}</p>
                   </div>
                 ))}
@@ -117,12 +117,12 @@ export default function AboutSection() {
               </h3>
               <div className="space-y-6">
                 {education.map((edu, index) => (
-                  <div key={index} className="border-l-2 border-blue-accent pl-6 relative">
-                    <div className="absolute w-3 h-3 bg-blue-accent rounded-full -left-2 top-2"></div>
+                  <div key={index} className="border-l-2 border-orange-accent pl-6 relative">
+                    <div className="absolute w-3 h-3 bg-orange-accent rounded-full -left-2 top-2"></div>
                     <h4 className="text-lg font-semibold text-white">
                       {edu.degree}
                     </h4>
-                    <p className="text-blue-accent font-medium">
+                    <p className="text-orange-accent font-medium">
                       {edu.institution}
                     </p>
                     <p className="text-gray-400 text-sm">{edu.period}</p>

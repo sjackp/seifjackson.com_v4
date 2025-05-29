@@ -63,10 +63,10 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 font-geist ${
+                  className={`px-3 py-2 rounded-lg text-sm font-medium font-geist ${
                     activeSection === item.id
-                      ? "text-neon-green glow-neon-green bg-dark-accent/30"
-                      : "text-gray-300 hover:text-neon-green hover:bg-dark-accent/20"
+                      ? "text-orange-accent bg-dark-accent/30"
+                      : "text-gray-300"
                   }`}
                 >
                   {item.label}
@@ -80,7 +80,7 @@ export default function Navigation() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-300 hover:text-neon-green p-2 transition-colors duration-300"
+              className="text-gray-300 p-2"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -100,7 +100,7 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left text-gray-300 hover:text-neon-green hover:bg-dark-accent/20 transition-all duration-300 px-3 py-2 rounded-lg text-base font-medium font-geist"
+                className="block w-full text-left text-gray-300 px-3 py-2 rounded-lg text-base font-medium font-geist"
               >
                 {item.label}
               </button>
