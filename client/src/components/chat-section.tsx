@@ -24,7 +24,7 @@ export default function ChatSection() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:contact@seifjackson.com"
+              href="mailto:sjpercle929@gmail.com"
               className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-accent to-orange-light text-black dark:text-white rounded-xl font-bold font-geist smooth-hover scale-hover glow-hover button-click transition-colors duration-500"
             >
               <Mail className="mr-2 w-4 h-4" />
