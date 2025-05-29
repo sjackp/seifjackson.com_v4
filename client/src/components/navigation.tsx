@@ -7,6 +7,7 @@ export default function Navigation() {
   const [activeSection, setActiveSection] = useState("about");
 
   const navItems = [
+    { id: "brands", label: "Brands", href: "#brands" },
     { id: "about", label: "About", href: "#about" },
     { id: "projects", label: "Projects", href: "#projects" },
     { id: "chat", label: "Chat", href: "#chat" },
