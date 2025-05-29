@@ -77,12 +77,13 @@ export default function Navigation() {
             <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-300 p-2 smooth-hover hover:text-orange-accent button-click"
+              className="text-theme-muted p-2 smooth-hover hover:text-orange-accent button-click"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -96,13 +97,13 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-dark-secondary/95 backdrop-blur-xl border-t border-dark-accent/20">
+        <div className="md:hidden bg-theme-secondary/95 backdrop-blur-xl border-t border-theme-accent/20 transition-colors duration-500">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left text-gray-300 px-3 py-2 rounded-lg text-base font-medium font-geist smooth-hover hover:text-orange-accent hover:bg-dark-accent/20 button-click"
+                className="block w-full text-left text-theme-muted px-3 py-2 rounded-lg text-base font-medium font-geist smooth-hover hover:text-orange-accent hover:bg-theme-accent/20 button-click"
               >
                 {item.label}
               </button>

@@ -40,7 +40,7 @@ export default function AboutSection() {
     <section id="about" className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-6xl font-black text-white mb-4 font-geist tracking-tight">
+          <h2 className="text-4xl sm:text-6xl font-black text-theme mb-4 font-geist tracking-tight transition-colors duration-500">
             About <span className="gradient-text">Me</span>
           </h2>
         </div>
@@ -62,8 +62,8 @@ export default function AboutSection() {
           <div className="space-y-8">
             {/* Bio Section */}
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4 font-geist">Bio</h3>
-              <p className="text-gray-300 leading-relaxed text-lg font-geist font-light">
+              <h3 className="text-2xl font-bold text-theme mb-4 font-geist transition-colors duration-500">Bio</h3>
+              <p className="text-theme-muted leading-relaxed text-lg font-geist font-light transition-colors duration-500">
                 Hey there! I'm Seif Jackson, a 24-year-old Egyptian-American
                 with a passion for blending art and technology. I've dived into
                 the world of AI, mastering everything from prompt engineering to
@@ -78,12 +78,12 @@ export default function AboutSection() {
 
             {/* Skills Section */}
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4 font-geist">Skills</h3>
+              <h3 className="text-2xl font-bold text-theme mb-4 font-geist transition-colors duration-500">Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-gradient-to-r from-orange-accent to-orange-light text-black rounded-full text-sm font-medium font-geist font-semibold smooth-hover scale-hover glow-hover cursor-pointer button-click"
+                    className="px-4 py-2 bg-gradient-to-r from-orange-accent to-orange-light text-white dark:text-black rounded-full text-sm font-medium font-geist font-semibold smooth-hover scale-hover glow-hover cursor-pointer button-click"
                   >
                     {skill}
                   </span>
@@ -93,18 +93,18 @@ export default function AboutSection() {
 
             {/* Experience Section */}
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">
+              <h3 className="text-2xl font-bold text-theme mb-6 font-geist transition-colors duration-500">
                 Experience
               </h3>
               <div className="space-y-6">
                 {experience.map((exp, index) => (
                   <div key={index} className="border-l-2 border-orange-accent pl-6 relative">
                     <div className="absolute w-3 h-3 bg-orange-accent rounded-full -left-2 top-2"></div>
-                    <h4 className="text-lg font-semibold text-white">
+                    <h4 className="text-lg font-semibold text-theme transition-colors duration-500">
                       {exp.title}
                     </h4>
                     <p className="text-orange-accent font-medium">{exp.company}</p>
-                    <p className="text-gray-400 text-sm">{exp.period}</p>
+                    <p className="text-theme-muted text-sm transition-colors duration-500">{exp.period}</p>
                   </div>
                 ))}
               </div>
@@ -112,20 +112,20 @@ export default function AboutSection() {
 
             {/* Education Section */}
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">
+              <h3 className="text-2xl font-bold text-theme mb-6 font-geist transition-colors duration-500">
                 Education
               </h3>
               <div className="space-y-6">
                 {education.map((edu, index) => (
                   <div key={index} className="border-l-2 border-orange-accent pl-6 relative">
                     <div className="absolute w-3 h-3 bg-orange-accent rounded-full -left-2 top-2"></div>
-                    <h4 className="text-lg font-semibold text-white">
+                    <h4 className="text-lg font-semibold text-theme transition-colors duration-500">
                       {edu.degree}
                     </h4>
                     <p className="text-orange-accent font-medium">
                       {edu.institution}
                     </p>
-                    <p className="text-gray-400 text-sm">{edu.period}</p>
+                    <p className="text-theme-muted text-sm transition-colors duration-500">{edu.period}</p>
                   </div>
                 ))}
               </div>
