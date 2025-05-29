@@ -1,6 +1,8 @@
-import { users, type User, type InsertUser } from "../shared/schema";
+import { users, type User, type InsertUser } from "@shared/schema";
 
-// Storage interface for serverless functions
+// modify the interface with any CRUD methods
+// you might need
+
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
@@ -34,5 +36,4 @@ export class MemStorage implements IStorage {
   }
 }
 
-// Export a singleton instance for serverless functions
 export const storage = new MemStorage();
