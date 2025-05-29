@@ -1,4 +1,5 @@
 import { Lock, ExternalLink } from "lucide-react";
+import miraiPreview from "@assets/ChatGPT Image May 26, 2025, 11_09_36 PM.png";
 
 export default function BrandsSection() {
   return (
@@ -32,18 +33,24 @@ export default function BrandsSection() {
               href="https://iridescent-mirage-seifjackson.replit.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-8 text-center h-full"
+              className="block h-full"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-accent to-orange-light rounded-xl mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-black text-black font-mono">M</span>
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src={miraiPreview} 
+                  alt="Mirai linenwear collection" 
+                  className="w-full h-full object-cover smooth-hover scale-hover"
+                />
               </div>
-              <h3 className="text-2xl font-black text-theme mb-2 font-mono transition-colors duration-500">Mirai</h3>
-              <p className="text-theme-muted text-sm font-geist font-light mb-4 transition-colors duration-500">
-                A modern linenwear brand blending minimalist design with desert-inspired tones, crafted for comfort, elegance, and timeless style—designed and manufactured in Egypt.
-              </p>
-              <div className="flex items-center justify-center gap-2 text-orange-accent">
-                <span className="text-xs font-mono">explore.mirai</span>
-                <ExternalLink className="w-3 h-3" />
+              <div className="p-6">
+                <h3 className="text-2xl font-black text-theme mb-2 font-mono transition-colors duration-500">Mirai</h3>
+                <p className="text-theme-muted text-sm font-geist font-light mb-4 transition-colors duration-500">
+                  A modern linenwear brand blending minimalist design with desert-inspired tones, crafted for comfort, elegance, and timeless style—designed and manufactured in Egypt.
+                </p>
+                <div className="flex items-center justify-center gap-2 text-orange-accent">
+                  <span className="text-xs font-mono">explore.mirai</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
               </div>
             </a>
           </div>
