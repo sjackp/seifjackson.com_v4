@@ -54,10 +54,10 @@ export default function ProjectsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-6xl font-black text-theme mb-4 font-geist tracking-tight transition-colors duration-500">
-            My <span className="gradient-text">Projects</span>
+            My <span className="gradient-text">Repositories</span>
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto font-geist font-light">
-            Latest repositories from my GitHub profile - real projects, real code.
+            Latest repositories from my GitHub profile - real projects, real code. 
           </p>
         </div>
 
