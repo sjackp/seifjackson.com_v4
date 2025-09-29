@@ -10,5 +10,15 @@ services:
       - "80:80"
     environment:
       - NODE_ENV=production
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    depends_on:
+      - web
+    command: tunnel --no-autoupdate run --token eyJhIjoiOTVkYTc2YzRjZGRiMmNlMDE5ZTAyMTc0ODdiNmQ3ZGUiLCJ0IjoiODQ3ZjE3ZmUtMGJmZi00Y2NiLWFkYmYtOWIwNzk5NjQ3YmM3IiwicyI6Ik56TTROekJsWVRJdE1UTm1NaTAwT0RabUxXRTFaall0T0RjME9HWmxZekkyWXpFMiJ9
+    networks:
+      - webnet
 
-
+networks:
+  webnet:
+    driver: bridge
