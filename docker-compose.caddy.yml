@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: seifjackson-site:latest
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - web
+    command: ["caddy", "reverse-proxy", "--from", "example.com", "--to", "web:80"]
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+
