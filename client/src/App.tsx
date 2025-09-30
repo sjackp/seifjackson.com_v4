@@ -25,7 +25,7 @@ function App() {
           <Toaster />
           <Router />
         </TooltipProvider>
-        <PlausibleAnalytics domain="plausible.seifjackson.com" scriptSrc="https://plausible.seifjackson.com/js/script.outbound-links.tagged-events.js" />
+        <PlausibleAnalytics domain="seifjackson.com" scriptSrc="https://plausible.seifjackson.com/js/script.outbound-links.tagged-events.js" />
       </QueryClientProvider>
     </ThemeProvider>
   );
