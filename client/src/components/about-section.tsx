@@ -13,6 +13,11 @@ export default function AboutSection() {
 
   const experience = [
     {
+      title: "Founder & CEO, Nazamly",
+      company: "Nazamly",
+      period: "2025-Present",
+    },
+    {
       title: "Ready-Made Garment Manufacturing",
       company: "Independent",
       period: "2022-Present",
@@ -75,7 +80,7 @@ export default function AboutSection() {
             <div>
               <h3 className="text-2xl font-bold text-theme mb-4 font-geist transition-colors duration-500">Bio</h3>
               <p className="text-theme-muted leading-relaxed text-lg font-geist font-light transition-colors duration-500">
-                26-year-old Egyptian-American creative and entrepreneur based in Cairo. With a unique blend of technical expertise and artistic vision, bridging the worlds of artificial intelligence, fashion, music, and design. He has deep experience in AI development and brings that same innovative mindset to the ready-made garment manufacturing industry, building modern, purpose-driven clothing brands.
+                26-year-old Egyptian-American creative and entrepreneur based in Cairo. With a unique blend of technical expertise and artistic vision, bridging the worlds of artificial intelligence, fashion, music, and design. In 2025, founded Nazamly, a company focused on empowering businesses and consumers with smart software solutions across multiple sectors. He has deep experience in AI development and brings that same innovative mindset to the ready-made garment manufacturing industry, building modern, purpose-driven clothing brands.
                 <br /><br />
                 A graduate of EU Business School in Barcelona, also a music producer, DJ, and visual artist who thrives on crafting immersive and experimental experiences.
                 <br /><br />

@@ -15,7 +15,7 @@ interface GitHubRepo {
 }
 
 async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
-  const response = await fetch('https://api.github.com/users/sjackp/repos?sort=updated&per_page=6');
+  const response = await fetch('https://api.github.com/users/sjackp/repos?per_page=100');
   if (!response.ok) {
     throw new Error('Failed to fetch GitHub repositories');
   }
@@ -48,6 +48,19 @@ export default function ProjectsSection() {
       year: 'numeric',
     });
   };
+
+  // Sort by most starred, tie-break by most recently updated; show top 6
+  let sortedRepos: GitHubRepo[] = [];
+  if (repos) {
+    sortedRepos = [...repos]
+      .sort((a, b) => {
+        if (b.stargazers_count !== a.stargazers_count) {
+          return b.stargazers_count - a.stargazers_count;
+        }
+        return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime();
+      })
+      .slice(0, 6);
+  }
 
   return (
     <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8 bg-dark-primary/50">
@@ -85,7 +98,7 @@ export default function ProjectsSection() {
 
         {repos && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {repos.map((repo) => (
+            {sortedRepos.map((repo) => (
               <div
                 key={repo.id}
                 className="bg-dark-accent/30 backdrop-blur-xl rounded-2xl border border-dark-accent/40 overflow-hidden smooth-hover lift-hover glow-hover cursor-pointer"
@@ -104,11 +117,9 @@ export default function ProjectsSection() {
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
-                  
                   <p className="text-theme-muted mb-4 leading-relaxed text-sm font-geist font-light min-h-[3rem] transition-colors duration-500">
                     {repo.description || "No description available"}
                   </p>
-
                   <div className="flex items-center justify-between text-xs text-theme-muted mb-3 transition-colors duration-500">
                     <div className="flex items-center gap-4">
                       {repo.language && (
@@ -118,7 +129,10 @@ export default function ProjectsSection() {
                         </span>
                       )}
                       <span className="flex items-center gap-1">
-                        <Star className="w-3 h-3" />
+                        <Star
+                          className={`w-3 h-3 ${repo.stargazers_count > 5 ? 'text-yellow-400 animate-pulse' : ''}`}
+                          style={repo.stargazers_count > 5 ? { filter: 'drop-shadow(0 0 4px gold)' } : {}}
+                        />
                         {repo.stargazers_count}
                       </span>
                       <span className="flex items-center gap-1">
@@ -127,12 +141,10 @@ export default function ProjectsSection() {
                       </span>
                     </div>
                   </div>
-
                   <div className="flex items-center gap-1 text-xs text-theme-muted font-geist transition-colors duration-500">
                     <Calendar className="w-3 h-3" />
                     Updated {formatDate(repo.updated_at)}
                   </div>
-
                   {repo.topics.length > 0 && (
                     <div className="flex flex-wrap gap-1 mt-3">
                       {repo.topics.slice(0, 3).map((topic) => (

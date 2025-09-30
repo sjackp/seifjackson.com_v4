@@ -7,10 +7,11 @@ export default function Navigation() {
   const [activeSection, setActiveSection] = useState("about");
 
   const navItems = [
-    { id: "brands", label: "Brands", href: "#brands" },
-    { id: "music", label: "Music", href: "#music" },
+    { id: "nazamly", label: "Nazamly", href: "#nazamly" },
     { id: "projects", label: "Projects", href: "#projects" },
+    { id: "brands", label: "Brands", href: "#brands" },
     { id: "about", label: "About", href: "#about" },
+    { id: "music", label: "Music", href: "#music" },
     { id: "chat", label: "Chat", href: "#chat" },
   ];
 
@@ -28,8 +29,9 @@ export default function Navigation() {
       const scrollPos = window.scrollY + 100;
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
+        const sectionEl = section as HTMLElement;
+        const sectionTop = sectionEl.offsetTop;
+        const sectionHeight = sectionEl.offsetHeight;
         const sectionId = section.getAttribute("id");
 
         if (
