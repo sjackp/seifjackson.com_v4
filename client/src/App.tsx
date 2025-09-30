@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
+import { Analytics } from "@vercel/analytics/react";
+import PlausibleAnalytics, { usePlausible } from "@/components/plausible-analytics";
 
 function Router() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Toaster />
           <Router />
         </TooltipProvider>
+        <Analytics />
+        <PlausibleAnalytics domain="plausible.seifjackson.com" scriptSrc="https://plausible.seifjackson.com/js/script.outbound-links.tagged-events.js" />
       </QueryClientProvider>
     </ThemeProvider>
   );
